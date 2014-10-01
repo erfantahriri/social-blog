@@ -1,0 +1,13 @@
+Dear {{ user.name|capitalize }} {{ user.family|capitalize }},
+<br/>
+Welcome to Erfan's Social Blog (ESB)!
+<br/>
+To confirm your account please click on the following link:
+<br/>
+{{ url_for('auth.confirm', token=token, _external=True) }}
+<br/>
+Sincerely,
+<br/>
+The ESB Team
+<br/>
+Note: replies to this email address are not monitored.

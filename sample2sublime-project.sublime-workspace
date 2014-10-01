@@ -1,0 +1,468 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"configure_errorhandlers"
+			],
+			[
+				"co",
+				"configure_folders"
+			],
+			[
+				"re",
+				"render_template"
+			],
+			[
+				"use",
+				"user_agent"
+			],
+			[
+				"c",
+				"contact"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"menu",
+				"menu_list"
+			],
+			[
+				"mo",
+				"mohit"
+			],
+			[
+				"p",
+				"print"
+			],
+			[
+				"d",
+				"dis"
+			],
+			[
+				"im",
+				"ifmain	if __name__ == '__main__'"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "project/media/templates/site/index.html",
+			"settings":
+			{
+				"buffer_size": 628,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "project/media/templates/errors/404.html",
+			"settings":
+			{
+				"buffer_size": 223,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "project/media/templates/base/_base.html",
+			"settings":
+			{
+				"buffer_size": 1119,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "project/application.py",
+			"settings":
+			{
+				"buffer_size": 2604,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "develop.py",
+			"settings":
+			{
+				"buffer_size": 140,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "deploy.py",
+			"settings":
+			{
+				"buffer_size": 138,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/erfan/work/sample2"
+	],
+	"file_history":
+	[
+		"/home/erfan/work/sample2/project/apps/site/views.py",
+		"/home/erfan/work/sample2/project/config.py",
+		"/home/erfan/work/sample2/deploy.py",
+		"/home/erfan/work/sample2/project/application.py",
+		"/home/erfan/work/sample2/develop.py",
+		"/home/erfan/work/sample2/project/media/template/base/_base.html",
+		"/home/erfan/work/sample2/project/media/template/errors/404.html",
+		"/home/erfan/work/sample2/project/media/template/site/index.html",
+		"/home/erfan/work/sample2/project/media/__init__.py",
+		"/home/erfan/work/sample2/project/apps/__init__.py",
+		"/home/erfan/work/sample2/project/apps/site/__init__.py",
+		"/home/erfan/work/sample2/project/__init__.py",
+		"/home/erfan/work/sample2/project/deploy.py",
+		"/home/erfan/work/sample2/sample2sublime-project",
+		"/home/erfan/work/flask/sampke2.sublime-project",
+		"/home/erfan/work/sample/sample.sublime-project",
+		"/home/erfan/work/majid/test.py",
+		"/home/erfan/work/flask/templates/index.html",
+		"/home/erfan/work/flask/templates/base/base.html",
+		"/home/erfan/work/flask/flask1.py",
+		"/home/erfan/work/flask/index.html:Jinja2 template",
+		"/home/erfan/work/flask/index.html",
+		"/home/erfan/work/flask/flasky/index.html",
+		"/home/erfan/work/contact-manager/data/contacts",
+		"/home/erfan/work/contact-manager/module.py",
+		"/home/erfan/work/contact-manager/contact-manager.py",
+		"/home/erfan/work/contact-manager/module/module.py",
+		"/home/erfan/work/project1/text",
+		"/home/erfan/work/project1/ali",
+		"/home/erfan/work/project1/ali20",
+		"/home/erfan/work/project1/test2.py",
+		"/home/erfan/work/project1/module.py",
+		"/home/erfan/work/project1/test.py",
+		"/home/erfan/work/module.py"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"x"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "project/media/templates/site/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 628,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "project/media/templates/errors/404.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								134,
+								134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "project/media/templates/base/_base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1119,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "project/application.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2604,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "develop.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "deploy.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								138,
+								138
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 124.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "sample2sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/work/sample/sample.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 256.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

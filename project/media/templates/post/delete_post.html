@@ -1,0 +1,45 @@
+{% extends "base/_base.html" %}
+{% from '_macros.html' import render_field %}
+
+{% block head %}
+    {{ super() }}
+    <style>
+    </style>
+
+    {% block scripts %}
+        {{ super() }}
+        {{ pagedown.include_pagedown() }}
+    {% endblock %}
+
+{% endblock %}
+
+{% block title %}Flasky - Edit Post{% endblock %}
+{% block page_content %}
+<div class="page-header">
+    <h1>Delete Post</h1>
+</div>
+<div class="container">
+    <div>
+        <br/>
+        {% if current_user.can(permission.WRITE_ARTICLES) %}
+
+
+        <div>
+            <form method="POST">
+                <dl>
+                    {{ form.hidden_tag() }}
+
+                    {{ render_field(form.body) }}
+
+                    <br/>
+
+                    {{ form.submit() }}
+                </dl>
+            </form>
+        </div>
+
+
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

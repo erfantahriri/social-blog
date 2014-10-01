@@ -1,0 +1,29 @@
+{% extends "base/_base.html" %}
+{% from '_macros.html' import render_field %}
+
+{% block title %}{{ user.name|capitalize }}'s Profile editor Admin{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div>
+        <form method="POST">
+            <dl>
+            {{ form.hidden_tag() }}
+
+            {{ render_field(form.email) }}
+            {{ render_field(form.username) }}
+            {{ render_field(form.confirmed) }}
+            {{ render_field(form.role) }}
+            {{ render_field(form.name) }}
+            {{ render_field(form.family) }}
+            {{ render_field(form.location) }}
+            {{ render_field(form.about_me) }}
+
+            <br/>
+
+            {{ form.submit() }}
+            </dl>
+        </form>
+    </div>
+</div>
+{% endblock %}

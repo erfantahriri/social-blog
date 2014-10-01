@@ -1,0 +1,10 @@
+{% extends "base/_base.html" %}
+{% from '_macros.html' import render_field %}
+
+{% block title %}{{ current_user.name|capitalize }}'s Dashboard{% endblock %}
+
+{% block body %}
+<div class="container">
+    it is {{ current_user.name }} Dashboard....
+</div>
+{% endblock %}
