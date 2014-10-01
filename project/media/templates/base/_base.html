@@ -1,0 +1,101 @@
+<html>
+<head>
+	{% block head %}
+	<title>{% block title %}{% endblock %} - EBS</title>
+    {% endblock %}
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" />
+	{% block css %}{% endblock %}
+
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="./js/html5shiv.js"></script>
+	<script src="./js/respond.min.js"></script>
+	<![endif]-->
+
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    {{ moment.include_moment() }}
+    {% block scripts %}{% endblock %}
+</head>
+
+<body style="min-width: 250px">
+	{% block navbar %}
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle"
+                        data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Social Blog</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Products</a></li>
+                        <li><a href="/">About Us</a></li>
+                        <li><a href="/">Contact Us</a></li>
+                        {% if current_user.is_authenticated() %}
+                            <li><a href="{{ url_for('dashboard.dashboard') }}">My Dashboard</a></li>
+                        {% endif %}
+
+                        {% if current_user.is_authenticated() %}
+                            <li>
+                                <a href="{{ url_for('profile.view_profile', username=current_user.username) }}">
+                                My Profile
+                                </a>
+                            </li>
+                            {% endif %}
+                    {% if current_user.can(permission.MODERATE_COMMENTS) %}
+                        <li><a href="{{ url_for('site.moderate') }}">Moderate Comments</a></li>
+                    {% endif %}
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if current_user.is_authenticated() %}
+
+                            <li><img class="img-rounded profile-thumbnail" src="{{ current_user.gravatar(size=30) }}" style="margin-top: 10px"></li>
+                            <li><a href="#">Hello, {{ current_user.name|capitalize }} {{ current_user.family|capitalize }}...</a></li>
+                            <li><a href="{{ url_for('auth.logout') }}">Sign Out</a></li>
+
+                        {% else %}
+
+                            <li><a href="#">Hello, Quest...</a></li>
+                            <li><a href="{{ url_for('auth.login') }}">Sign In </a></li>
+                            <li><a href="{{ url_for('auth.add_user') }}"> Sign Up</a></li>
+
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+
+<div class="container">
+    {% if get_flashed_messages() %}
+    <div class="alert alert-danger">
+        <ul>
+        {% for message in get_flashed_messages() %}
+            <li>
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+	{% block body %}
+	{% endblock %}
+    {% block page_content %}
+    {% endblock %}
+</div>
+</body>
+</html>

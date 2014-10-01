@@ -1,0 +1,44 @@
+{% extends "base/_base.html" %}
+{% from '_macros.html' import render_field %}
+{% from '_macros.html' import pagination_widget %}
+
+{% block title %}{{ user.name|capitalize }}'s Profile{% endblock %}
+
+{% block body %}
+
+<div>
+    <h3>{{ title }} {{ user.username }}:</h3>
+    <br/>
+    <ul class="follows">
+
+        {% for u in follows %}
+
+        <li class="alert alert-info" style="min-width: 200px; width: 200px; overflow: auto; float: left; margin-left: 15px;">
+
+            <div class="profile-thumbnail" style="float: left">
+                <a href="{{ url_for('profile.view_profile', username=u.user.username) }}">
+                    <img class="img-rounded profile-thumbnail" src="{{ u.user.gravatar(size=40) }}">
+                </a>
+            </div>
+            <div class="" style="margin-left: 50px">
+                <a href="{{ url_for('profile.view_profile', username=u.user.username) }}" style="; color: darkblue">
+                    {{ u.user.username }}
+                </a>
+            </div>
+            <div class="" style="float: left; font-size: 12px; margin-left: 10px; margin-top: 2px; color: #000000">
+               {{ teaser(u.user.name|capitalize,10) }}&nbsp{{ u.user.family|capitalize }}
+            </div>
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+    <div class="pagination" style="">
+        {{ pagination_widget(pagination, 'site.followed_by', username=user.username) }}
+    </div>
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends "base/_base.html" %}
+{% from '_macros.html' import render_field %}
+
+{% block title %}Add Role{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+</style>
+{% endblock %}
+
+{% block body %}
+<br/>
+    <form method="POST">
+        <dl>
+        {{ form.hidden_tag()}}
+
+        {{ render_field(form.role_name) }}
+
+        {{ form.submit() }}
+        </dl>
+    </form>
+{% endblock %}

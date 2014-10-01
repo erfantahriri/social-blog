@@ -1,0 +1,28 @@
+{% extends "base/_base.html" %}
+{% from '_macros.html' import render_field %}
+
+{% block title %}Sign in{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div>
+        <form method="POST">
+            <dl>
+            {{ form.hidden_tag() }}
+
+            {{ render_field(form.email) }}
+            {{ render_field(form.password) }}
+            {{ render_field(form.remember_me) }}
+            <br/>
+            {{ form.submit() }}
+            </dl>
+        </form>
+        <p>
+            New user?
+            <a href="{{ url_for('auth.add_user') }}">
+                Click here to register
+            </a>
+        </p>
+    </div>
+</div>
+{% endblock %}

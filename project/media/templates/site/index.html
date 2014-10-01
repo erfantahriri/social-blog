@@ -1,0 +1,73 @@
+{% extends "base/_base.html" %}
+{% from '_macros.html' import render_field %}
+{% from '_macros.html' import pagination_widget %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <style>
+    </style>
+
+    {% block scripts %}
+        {{ super() }}
+        {{ pagedown.include_pagedown() }}
+    {% endblock %}
+
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Wellcome To Erfan's Social Blog...</h1>
+    </div>
+
+    <div class="container">
+        <div>
+            <br/>
+            {% if current_user.can(permission.WRITE_ARTICLES) %}
+
+
+                <div>
+                    <form method="POST">
+                        <dl>
+                        {{ form.hidden_tag() }}
+
+                        {{ render_field(form.body) }}
+
+                        <br/>
+
+                        {{ form.submit() }}
+                        </dl>
+                    </form>
+                </div>
+
+
+            {% endif %}
+        </div>
+
+
+
+        <a class="btn btn-default" href="{{ url_for('site.show_all') }}" style="font-size: 15px">All</a>
+        <a class="btn btn-default" href="{{ url_for('site.show_followed') }} "style="font-size: 15px">Followed</a>
+
+        <br/>
+        <br/>
+        {% if show_followed %}
+            This is your followed users posts only:
+        {% else %}
+            This is all of posts:
+        {% endif %}
+        <br/>
+
+        {% include 'post/_posts.html' %}
+
+        <div class="pagination">
+            {{ pagination_widget(pagination, 'site.index') }}
+        </div>
+
+    </div>
+
+{% endblock %}
+
+

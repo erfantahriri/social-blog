@@ -1,0 +1,5 @@
+<h2>API Document</h2>
+<pre>
+100: login successful
+101: user or password is invalid
+</pre>

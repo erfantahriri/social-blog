@@ -1,0 +1,15 @@
+{% if current_user.can(permission.WRITE_ARTICLES) %}
+    <div>
+        <form method="POST">
+            <dl>
+                {{ form.hidden_tag() }}
+
+                {{ render_field(form.body) }}
+
+                <br/>
+
+                {{ form.submit() }}
+            </dl>
+        </form>
+    </div>
+{% endif %}
