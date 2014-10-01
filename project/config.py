@@ -18,7 +18,8 @@ class DefaultConfig(object):
 
     SSL_DISABLE = True
 
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
+    # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:el040190@127.0.0.1/esbdbT'
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
     MAIL_SERVER = 'smtp.googlemail.com'

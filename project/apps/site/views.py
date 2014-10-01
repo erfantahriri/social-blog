@@ -113,9 +113,9 @@ def show_followed():
 @mod.route('gf', methods=['GET', 'POST'])
 def gf():
     User.generate_fake(50)
-    # Post.generate_fake(100)
-    # Follow.generate_fake(400)
-    # Comment.generate_fake(400)
+    Post.generate_fake(100)
+    Follow.generate_fake(400)
+    Comment.generate_fake(400)
     flash('generating fake informations complete...')
     return redirect(url_for('site.index'))
 
