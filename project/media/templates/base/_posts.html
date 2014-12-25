@@ -1,0 +1,135 @@
+<div>
+<ul class="posts">
+    {% for post in posts %}
+    <li class="alert alert-info" style="min-width: 200px">
+        <div class="profile-thumbnail" style="float: left">
+            <a href="{{ url_for('profile.view_profile', username=post.author.username) }}">
+                <img class="img-rounded profile-thumbnail" src="{{ post.author.gravatar(size=40) }}">
+            </a>
+        </div>
+        <div class="post-date" style="text-align: right; float: right; color: darkred">{{ moment(post.timestamp).fromNow(refresh=True) }}</div>
+        <div class="post-author" style="margin-left: 50px">
+            <a href="{{ url_for('profile.view_profile', username=post.author.username) }}" style="; color: darkblue">
+                {{ post.author.username }} :
+            </a>
+        </div>
+        <div class="post-body" style="margin-left: 58px; margin-top: 2px; color: #000000">
+            {% if post.body_html %}
+                {{ post.body_html | safe }}
+            {% else %}
+                {{ post.body }}
+            {% endif %}
+        </div>
+        <div class="post-footer" style="text-align: right">
+            <a href="{{ url_for('post.post', id=post.id) }}">
+                <span class="label label-default">Permalink</span>
+            </a>
+
+
+            {% if current_user == post.author %}
+
+                <!--<a href="{{ url_for('post.edit', id=post.id) }}">-->
+                <a data-toggle="modal" data-target="#myModal1">
+                    <span class="label label-primary">Edit</span>
+                </a>
+                    <!-- Modal -->
+                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel" style="text-align: left">Post edit confirmation</h4>
+                      </div>
+                      <div class="modal-body" style="text-align: left; color: #000000">
+                         {% include 'post/edit_post.html' %}
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Edit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a data-toggle="modal" data-target="#myModal">
+                    <span class="label label-warning">Delete</span>
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel" style="text-align: left">Post delete confirmation</h4>
+                      </div>
+                      <div class="modal-body" style="text-align: left; color: #000000">
+                        Are you sure to delete this post?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <a href="{{url_for('post.delete', id=post.id)}}" class="btn btn-warning">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+            {% elif current_user.is_administrator() %}
+
+
+                <a>
+                    <span class="label label-danger" data-toggle="modal" data-target="#myModal3" style="cursor: hand">Edit [Admin]</span>
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel" style="text-align: left">Post edit confirmation [Admin]</h4>
+                      </div>
+                      <div class="modal-body" style="text-align: left; color: #000000">
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger">Edit [Admin]</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a>
+                    <span class="label label-danger" data-toggle="modal" data-target="#myModal22" style="cursor: hand">Delete [Admin]</span>
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel" style="text-align: left">Post delete confirmation [Admin]</h4>
+                      </div>
+                      <div class="modal-body" style="text-align: left; color: #000000">
+                        Are you sure to delete this post with your administrator access?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <a href="{{url_for('post.delete', id=post.id)}}" class="btn btn-danger">Delete [Admin]</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+            {% endif %}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+</div>
